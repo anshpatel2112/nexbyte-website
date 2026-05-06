@@ -1,0 +1,265 @@
+@import "../../../styles/global.scss";
+
+// --- Hero Section ---
+.services-hero {
+  position: relative;
+  padding: 160px 24px 100px;
+  background: $bg-gradiant;
+  text-align: center;
+  overflow: hidden;
+
+  .grid-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .glow-spot {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.3;
+    pointer-events: none;
+    
+    &.spot-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, $primary 0%, transparent 70%);
+      top: -100px; left: -100px;
+    }
+    &.spot-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, $secondary 0%, transparent 70%);
+      bottom: -100px; right: -100px;
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 100px;
+    backdrop-filter: blur(8px);
+    
+    .badge-icon {
+      width: 16px; height: 16px;
+      color: $secondary;
+    }
+    .badge-text {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin: 0;
+
+    .highlight {
+      color: $secondary;
+    }
+  }
+
+  .hero-description {
+    font-size: clamp(16px, 2vw, 20px);
+    color: rgba(255,255,255,0.7);
+    max-width: 700px;
+    line-height: 1.6;
+  }
+}
+
+// --- Grid Section ---
+.services-grid-section {
+  padding: 100px 24px;
+  background: $bg-tertiary;
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 32px;
+  }
+}
+
+.service-card {
+  perspective: 1000px;
+  
+  .card-inner {
+    height: 100%;
+    padding: 40px;
+    background: white;
+    border-radius: $border-radius-lg;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: $shadow-primary;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: $btn-gradiant;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &:hover {
+    .card-inner {
+      transform: translateY(-10px);
+      box-shadow: $hover-shadow-primary;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    .icon-box {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .learn-more {
+      color: $primary;
+      .arrow-icon {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: $border-radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+  ::ng-deep svg {
+    width: 32px;
+    height: 32px;
+    color: white;
+  }
+}
+
+.service-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $text-dark;
+  margin: 0;
+}
+
+.service-desc {
+  font-size: 16px;
+  color: $text-dark-muted;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.card-footer {
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $text-dark;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  .arrow-icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+    ::ng-deep svg {
+      stroke-width: 2.5px;
+    }
+  }
+}
+
+// --- CTA Section ---
+.cta-section {
+  padding: 0 24px 100px;
+  background: $bg-tertiary;
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .cta-card {
+    background: $bg-gradiant;
+    border-radius: $border-radius-lg;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    box-shadow: $hover-shadow-primary;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+    }
+  }
+
+  .cta-content {
+    h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      margin: 0 0 12px;
+    }
+    p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,21 @@
+<section class="for-us-section">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Who Is This <span class="highlight">For?</span></h2>
+      <p class="section-description">
+        This is for founders and businesses who really want to expand their firm and build a solid online presence.
+      </p>
+    </header>
+
+    <div class="audience-list">
+      @for (item of audienceItems(); track item.text) {
+        <div class="audience-card">
+          <div class="icon-box">
+            <app-svg [name]="item.icon" class="item-icon"></app-svg>
+          </div>
+          <p class="item-text">{{ item.text }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

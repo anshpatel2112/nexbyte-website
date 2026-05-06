@@ -1,0 +1,36 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="/assets/images/white_logo.PNG" alt="Nexbyte Logo">
+        </div>
+        <p class="company-desc">We build digital systems that help businesses attract,<br>convert, and scale with
+          confidence.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3 class="quick-links-title">Quick Links</h3>
+        <ul class="quick-links">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/services">Services</a></li>
+          <li><a routerLink="/blog">Blog</a></li>
+          <li><a routerLink="/training-internship">Training & Internship</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 Nexbyte Infotech. All rights reserved.</p>
+
+      <div class="social-links">
+        @for (item of links; track item.link) {
+        <a [href]="item.link" class="social-icon" [attr.aria-label]="item.label">
+          <app-svg [name]="item.icon"></app-svg>
+        </a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>

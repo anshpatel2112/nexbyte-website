@@ -1,0 +1,23 @@
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="subtitle">TESTIMONIALS</span>
+      <h2 class="title">What Our Clients <span class="highlight">Say</span></h2>
+    </div>
+
+    <div class="testimonials-grid">
+      @for (testimonial of testimonials(); track testimonial.name) {
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <app-svg name="quote"></app-svg>
+          </div>
+          <p class="quote-text">{{ testimonial.quote }}</p>
+          <div class="client-info">
+            <h4 class="client-name">{{ testimonial.name }}</h4>
+            <span class="client-city">{{ testimonial.city }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

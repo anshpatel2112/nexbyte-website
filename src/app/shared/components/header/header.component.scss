@@ -1,0 +1,72 @@
+@import "../../../../styles/global.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(11, 104, 218, 0.1);
+  padding: 12px 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-section {
+  .logo {
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #131720b3;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &.active {
+    color: $primary;
+    font-weight: 600;
+  }
+}
+
+.cta-section {
+  .btn-primary {
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+}

@@ -1,0 +1,62 @@
+// Global Variables and Mixins
+// ---------------------------------------------------------
+
+// --- Colors ---
+$primary: #0b68da;
+$secondary: #2094f3;
+
+// Background colors
+$bg-primary: #0b68da; //primary
+$bg-secondary: #E2F1FD;
+$bg-tertiary: #F9FAFB;
+
+// Text colors
+$text-light: #ffffff;
+$text-light-muted: #ffffffb3;
+$text-secondary: #2094f3; //secondary
+$text-dark: #131720;
+$text-dark-muted: #6c7c93;
+
+// Chip colors
+$chip-bg: #0b68da1a;
+$chip-border: #0b68da33;
+$chip-text: #131720;
+
+// Icon colors
+$icon-primary: #0b68da; //primary
+$icon-secondary: #2094f3; //secondary
+$icon-bg: #e2f1fd;
+
+// Gradiant colors
+$btn-gradiant: linear-gradient(135deg, #0e3881, #0B68DA, #3ca5ff);
+$text-gradiant: linear-gradient(to right, #2094f3, #0b68da);
+$bg-gradiant: linear-gradient(160deg, #061837 0%, #052e61 50%, #0f538a 100%);
+
+// Border colors
+$border-primary: #0b68da4d;
+
+// Box-shadow
+$shadow-primary: #0b68da14 0px 4px 24px -4px;
+$hover-shadow-primary: #0b68da26 0px 12px 40px -8px;
+
+// Border-radius
+$border-radius-lg: 16px;
+$border-radius-md: 12px;
+$border-radius-sm: 8px;
+
+// --- Typography ---
+$font-family: 'Lato', sans-serif;
+
+// --- Global Styles ---
+body {
+    font-family: $font-family;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}

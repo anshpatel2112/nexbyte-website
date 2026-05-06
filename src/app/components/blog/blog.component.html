@@ -1,0 +1,46 @@
+<section class="blog-hero">
+  <div class="grid-overlay"></div>
+  <div class="glow-spot spot-1"></div>
+  <div class="glow-spot spot-2"></div>
+
+  <div class="hero-content">
+    <div class="badge">
+      <app-svg class="badge-icon" name="content"></app-svg>
+      <span class="badge-text">Our Blog</span>
+    </div>
+
+    <h1 class="hero-title">
+      Insights & <span class="highlight">Innovation</span>
+    </h1>
+
+    <p class="hero-description">
+      Explore the latest trends, tips, and stories from the world of technology, design, and marketing.
+    </p>
+  </div>
+</section>
+
+<section class="blog-grid-section">
+  <div class="container">
+    <div class="blog-grid">
+      @for (i of [1, 2, 3, 4, 5, 6]; track i) {
+        <div class="blog-card empty">
+          <div class="blog-image-placeholder">
+            <div class="shimmer"></div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta-shimmer"></div>
+            <div class="blog-title-shimmer"></div>
+            <div class="blog-excerpt-shimmer"></div>
+            <div class="blog-footer-shimmer"></div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="pagination-shimmer">
+      <div class="page-dot active"></div>
+      <div class="page-dot"></div>
+      <div class="page-dot"></div>
+    </div>
+  </div>
+</section>

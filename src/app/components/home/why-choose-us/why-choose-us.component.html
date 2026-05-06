@@ -1,0 +1,24 @@
+<section class="why-choose-us">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Why Founders <span class="highlight">Choose Us</span></h2>
+      <p class="section-description">
+        We think like business owners. Every plan is aligned with your business goals, not just deliverables.
+      </p>
+    </header>
+
+    <div class="usp-grid">
+      @for (item of usps(); track item.title) {
+        <div class="usp-card">
+          <div class="icon-box">
+            <app-svg [name]="item.icon" class="item-icon"></app-svg>
+          </div>
+          <div class="content-box">
+            <h3 class="item-title">{{ item.title }}</h3>
+            <p class="item-description">{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

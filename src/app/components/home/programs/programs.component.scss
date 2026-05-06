@@ -1,0 +1,170 @@
+@import '../../../../styles/global.scss';
+
+.programs-section {
+  padding: 100px 0;
+  background: $bg-gradiant;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+
+  .sub-title {
+    color: $secondary;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 16px;
+
+    .highlight {
+      color: $secondary;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  .section-description {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 64px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.program-card {
+  padding: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+  .card-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #ffffff;
+  }
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .check-icon {
+      width: 24px;
+      height: 24px;
+      color: $secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      ::ng-deep svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .benefit-text {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+    }
+  }
+}
+
+.audience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.audience-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    background: rgba(32, 148, 243, 0.15);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondary;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+
+    ::ng-deep svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:hover .icon-box {
+    background: $secondary;
+    color: #fff;
+    transform: scale(1.05);
+  }
+
+  .audience-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.cta-area {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,47 @@
+<section class="programs-section">
+  <div class="container">
+    <header class="section-header">
+      <span class="sub-title">PROGRAMS</span>
+      <h2 class="section-title">Learn. Work. <span class="highlight">Grow with Nexbyte.</span></h2>
+      <p class="section-description">
+        Gain real-world experience and build job-ready skills by working on live projects with our team.
+      </p>
+    </header>
+
+    <div class="programs-grid">
+      <!-- Box 1: What You'll Get -->
+      <div class="program-card benefits-card">
+        <h3 class="card-title">What You'll Get</h3>
+        <ul class="benefits-list">
+          @for (benefit of benefits(); track benefit.text) {
+            <li class="benefit-item">
+              <div class="check-icon">
+                <app-svg name="check"></app-svg>
+              </div>
+              <span class="benefit-text">{{ benefit.text }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- Box 2: Who It's For -->
+      <div class="program-card audience-card">
+        <h3 class="card-title">Who It's For</h3>
+        <div class="audience-list">
+          @for (group of targetGroups(); track group.text) {
+            <div class="audience-item">
+              <div class="icon-box">
+                <app-svg [name]="group.icon"></app-svg>
+              </div>
+              <p class="audience-text">{{ group.text }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-area">
+      <app-button label="Apply for Training & Internship" icon="Arrow"></app-button>
+    </div>
+  </div>
+</section>

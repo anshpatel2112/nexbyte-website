@@ -1,0 +1,16 @@
+<section class="impact-section">
+  <div class="container">
+    <h2 class="section-title">Our Impact</h2>
+    
+    <div class="stats-grid">
+      @for (stat of stats(); track stat.id) {
+        <div class="stat-item">
+          <div class="stat-number">
+            {{ stat.current }}<span class="plus">+</span>
+          </div>
+          <p class="stat-label">{{ stat.label }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+@import '../../../../styles/global.scss';
+
+.impact-section {
+  padding: 100px 0;
+  // Using the horizontal gradient from the design image
+  background: linear-gradient(to right, #0e3881, #0b68da, #3ca5ff);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 72px;
+  letter-spacing: -0.02em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.stat-item {
+  .stat-number {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .plus {
+      font-size: 48px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-left: 2px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+      .plus { font-size: 36px; }
+    }
+  }
+
+  .stat-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    line-height: 1.5;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}

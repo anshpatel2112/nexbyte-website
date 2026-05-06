@@ -1,0 +1,105 @@
+@import '../../../../styles/global.scss';
+
+.for-us-section {
+  padding: 100px 0;
+  background-color: #F9FAFB;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+
+  .section-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+
+    .highlight {
+      color: $primary;
+    }
+  }
+
+  .section-description {
+    font-size: 16px;
+    color: #6c7c93;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.audience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.audience-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+
+  .icon-box {
+    width: 52px;
+    height: 52px;
+    background: #e2f1fd;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    flex-shrink: 0;
+
+    .item-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .item-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+  }
+
+  // Hover Effect: 1px blue border as per screenshot
+  &:hover {
+    border-color: #2094f3; // $secondary or similar blue
+    box-shadow: 0 10px 30px rgba(11, 104, 218, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+
+  .audience-card {
+    padding: 16px 20px;
+
+    .item-text {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import '../../../../styles/global.scss';
+
+.testimonials-section {
+  padding: 100px 0;
+  background-color: $bg-tertiary; // Slightly off-white background as seen in the image
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+
+  .subtitle {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+
+  .title {
+    font-size: 48px;
+    font-weight: 800;
+    color: $text-dark;
+    line-height: 1.2;
+    margin: 0;
+
+    .highlight {
+      color: $primary;
+    }
+  }
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 calc(33.33% - 16px);
+  min-width: 300px;
+  max-width: 380px;
+  padding: 40px 32px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  position: relative;
+
+  .quote-icon {
+    margin-bottom: 24px;
+    color: #A0C3FF; // Light blue for the outline quote icon
+
+    ::ng-deep svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .quote-text {
+    font-size: 16px;
+    color: $text-dark-muted;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    flex-grow: 1; // Pushes client info to the bottom
+  }
+
+  .client-info {
+    .client-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: $text-dark;
+      margin: 0 0 4px 0;
+    }
+
+    .client-city {
+      font-size: 14px;
+      color: #8fa0b5;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba(11, 104, 218, 0.08);
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .testimonial-card {
+    flex: 0 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header .title {
+    font-size: 36px;
+  }
+
+  .testimonial-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

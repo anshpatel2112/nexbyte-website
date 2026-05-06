@@ -1,0 +1,54 @@
+<section class="services-hero">
+  <div class="grid-overlay"></div>
+  <div class="glow-spot spot-1"></div>
+  <div class="glow-spot spot-2"></div>
+
+  <div class="hero-content">
+    <div class="badge">
+      <app-svg class="badge-icon" name="sparkle"></app-svg>
+      <span class="badge-text">Our Expertise</span>
+    </div>
+    <h1 class="hero-title">
+      Strategic Solutions for <span class="highlight">Digital Excellence</span>
+    </h1>
+    <p class="hero-description">
+      We provide a comprehensive suite of digital services designed to scale your business, 
+      enhance your brand presence, and drive meaningful results in an ever-evolving digital landscape.
+    </p>
+  </div>
+</section>
+
+<section class="services-grid-section">
+  <div class="container">
+    <div class="services-grid">
+      @for (service of services; track service.title) {
+        <div class="service-card" [attr.id]="'service-' + service.icon">
+          <div class="card-inner">
+            <div class="icon-box" [style.background]="service.gradient">
+              <app-svg [name]="service.icon"></app-svg>
+            </div>
+            <h3 class="service-title">{{ service.title }}</h3>
+            <p class="service-desc">{{ service.description }}</p>
+            <div class="card-footer">
+              <span class="learn-more">Learn More <app-svg name="Arrow" class="arrow-icon"></app-svg></span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-content">
+        <h2>Ready to transform your business?</h2>
+        <p>Let's discuss how our services can specifically benefit your unique goals.</p>
+      </div>
+      <div class="cta-action">
+        <app-button label="Get a Free Quote" icon="Arrow" routerLink="/contact"></app-button>
+      </div>
+    </div>
+  </div>
+</section>

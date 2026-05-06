@@ -1,0 +1,6 @@
+<button class="btn-primary">
+  <span class="btn-label">{{ label() }}</span>
+  @if (icon()) {
+    <app-svg class="btn-icon" [name]="icon()!"></app-svg>
+  }
+</button>
